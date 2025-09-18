@@ -1,0 +1,28 @@
+dataset:
+train_images: data/train_images
+valid_images: data/valid_images
+test_images: data/test_images
+train_json: data/annotations/train.json
+valid_json: data/annotations/valid.json
+test_json: data/annotations/test.json
+input_size: [256,256]
+model:
+backbone: resnet50
+pretrained: true
+output_dim: 28 # 14 keypoints * 2
+freeze_backbone_epochs: 2
+training:
+epochs: 40
+batch_size: 16
+lr: 1e-4
+weight_decay: 1e-5
+device: cuda:0
+mixed_precision: true
+num_workers: 4
+seed: 42
+metrics:
+pck_thresh: 0.02
+logging:
+tb_logdir: logs/tennis_resnet50
+ckpt_dir: checkpoints/
+outputs: outputs/
