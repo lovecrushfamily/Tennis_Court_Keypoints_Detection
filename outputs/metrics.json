@@ -1,0 +1,9 @@
+{
+  "PCK": 0.0,
+  "OKS": 3.1628731099049684e-07,
+  "RMSE_pixel_mean": 750.4870911271623,
+  "RMSE_norm_mean": 0.8625884164404907,
+  "Inference_avg_s": 0.008149633973331774,
+  "Inference_median_s": 0.007651090621948242,
+  "Num_evaluated_images": 118
+}

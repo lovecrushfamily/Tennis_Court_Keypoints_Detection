@@ -1,10 +1,10 @@
 dataset:
-train_images: data/train_images
-valid_images: data/valid_images
-test_images: data/test_images
-train_json: data/annotations/train.json
-valid_json: data/annotations/valid.json
-test_json: data/annotations/test.json
+train_images: data/train/images
+valid_images: data/valid/images
+test_images: data/test/images
+train_json: data/train/labels.json
+valid_json: data/valid/labels.json
+test_json: data/test/labels.json
 input_size: [256,256]
 model:
 backbone: resnet50

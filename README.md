@@ -98,7 +98,7 @@ flowchart LR
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/yourname/court-keypoints.git
+git clone https://github.com/lovecrushfamily/Tennis_Court_Keypoints_Detection.git
 cd court-keypoints
 
 # 2. Create venv & install dependencies
