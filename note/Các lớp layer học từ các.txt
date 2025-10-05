@@ -1,0 +1,69 @@
+Các lớp layer học từ các thông tin cơ bản nhất, các layer ban đầu learn những phần cơ bản nhất như cạnh viền, đuờng bo, tiếp các layer tiếp theo nó học trừu tuợng hơn,
+THầy nói là các lớp sau có thể học đuợc hình đạng, đặc trưng trừu tuợng hơn, 
+Càng nhiều layer ẩn, biểu diễn hình ảnh càng trừu tuợng và phức tạp, nhưng tối uư không phải là càng nhiều càng tốt mà chạm đến 1 nguỡng trừu tuợng nào đó là đủ rồi
+
+Còn lớp đầu ra thì cố gắng phần loại, gộp tất cả những tầng trừu tuợng lại, nhìn 1 cách tổng thể các dặc trưng
+
+
+KHi mà mô hình ít lớp, khó phân biệt con chó và con mèo vì cái đặc trưng nó chưa đuợc rõ ràng qua các tầng layer.
+
+
+VGG16 tức là 16 layer có tham số và có thể tham gia quá trình học đuợc, không tính đến các layer không có tham gia học, softmax, maxpooling
+
+Hoá ra cái backbone là cái dùng để trích xuất đặc trưng, nó chỉ đơn giản là các cái kiến trúc CNN tấu thành các block thôi mà.
+Sau này các backbone này đã đuợc train sẵn rồi nên cứ dùng thôi.  
+
+Mặc dù weights dã đuợc train nhưng toàn mấy cái filter trong convolutional thì train cái gì nhỉ, ngta design sẵn kiến trúc thôi chứ trong đó lmj học đc cái j đâu.
+
+
+
+LeNet : kiến trúc cơ bản đầu tiên, khá đơn giản thôi, của Yan Lecun
+AlexNet: Cải tiến hơn LeNet, sâu honw, sử dụng ReLu cho activation, bên LeNet là dùng Tanh, dùng ReLU để tránh gradient Vanishing tránh mất đạo hàm không thì không điều chỉnh trọng số đưọc, trọng số truớc bằng trọng số sau, không học đuợc
+Sử dụng Data augmentation, tăng cưỏng dữ lieuẹ, Apply drop out cho lớp fully connectect
+Sử dụng nhiều kernel size hơn LeNet
+ReLu cũng cho phép mở dụng mở rộng mô hình hơn
+
+
+
+
+VGG: trông nhìn qua thì cũng hình như có thêm cái maxpooling, rồi thêm kiến trúc block, dễ mở rộng và phát triển các bản biến thể, 
+VGG sử dụng kernel size 3x3 nhỏ hơn và nhanh hơn, hiệu quả hơn,uư điểm tại các lớp ban đầu thì cái kernel này học rất tốt các cái đặc trưng nhỏ
+sử dụng stack layer 
+Sử dụng 3 cái 3x3 nhanh và hiệu quả hơn 1 cái 5x5 kernel
+Việc sử dụng cái này, khiến cho mô hình có thể mở rộng thêm nhiều layer hơn, nhiều lớp hơn có thể học đuợc sâu hơn
+Nếu dùng 5x5 thì model càng sâu sẽ càng nặng, càng phình to thì 2 cái 3x3 lại giảm đáng kể , nó ko phình to quá nhiều, gần như hiệu suất như nhau nhưng lại ít tài nguyên tính toán, tham số hơn, quá tuyệt vời rồi, số lưọng tham số giảm đi vô cùng nhiều
+Từ thời gian training đến kích thưóc giảm đáng kể
+
+
+GoogleLeNet có đột phá cải tiến so với VGG, Inception-Net
+Cải tiến có thể mở rộng về chiều ngang và chiều sâu
+Thêm 1 kiểu kernel 1x1, 3x3, 5x5 
+Thêm cái 1x1 có thể làm giảm tham số của mô hình
+Cho đến bây giờ các mô hình lớn vẫn dựa trên ý tưỏng kiến trúc 1x1 này, 
+Chính vì mang lại khả năng mở rộng các layer nên thành ra cái googleNet này nó training quá lâu
+nó đủ mạnh để giải quyết các bài toán phức tạp nhưng thời gian cho ăn tham số lâu quá
+
+
+ResNet (Residual Net) lại có đột phá gì dó 
+Đột phá lớn nhất ở dây là giới thiệu khái  niệm mới Residual learning, nó bảo toàn thông tin qua các layer, mục đích giữ lại thông tin , không 1 cái pooling nào mà dám chắc bảo toàn lại duợc tất cả các thông tin quan trọng cả, chỉ giảm thiểu thôi
+các cái shortcut connection này cho phép gradient lan truyền trực tiếp qua các tầng giúp mạng sâu hơn mà không giảm độ chính xác
+sử dụng thêm bottle neck design 
+Hiện tại thì gần như nó là chuẩn mực, standard trong Computer Vision, nền tảng cho modern computer vision  thì đúng hơn
+Giải quyết đuợc vanishing gradient
+
+Bình thuờng là tăng số layer thì nghe tuởng như hiệu suất mô hình  sẽ tăng lên đúng chứ, nhưng không mô hình lại nhiều lỗi hơn.
+Khi chưa có resnet thì tất cả việc mở rộng mô hình, thêm layer đều theo kiểu truyền thống..
+Nhưng khi có skip connections, cái residual á, thì mô hình càng mở rộng, sâu hơn nó lại có hiệu suất cao hơn nhiều.
+
+
+Trình độ của thầy ở cái đẳng cấp khác rồi, thầy ở cỡ control duợc các cái mạng, design kiến trúc model, tận dụng đuợc cái có sẵn, cải tiến ở cái level idea mindset rồi. Modifier là đấy, Mindset của thầy là kiểu à đọc cái này có cái gì hay, cái kia có cái gì hay, kết hợp lại xem nào, xời ơi, quá đẳng cấp luôn,
+Step by step
+
+
+Khi kết hợp ưu điểm của ResNet và GoogleNet => DenseNet
+Khi dùng quá nhiều kết nối để dào sâua model như Resnet thì lại chậm,
+
+Thay vì 2 cái 3x3 dùng 1 cái 1x1, 
+và sử dụng skip connection tối uư hơn qua việc kết nối các block
+Số layer tăng lên rất lớn
+Tuởng như nó chậm, nhưng khi gắn vào thì traini  cực nhanh, DenseNet

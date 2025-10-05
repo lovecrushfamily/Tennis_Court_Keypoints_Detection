@@ -1,0 +1,59 @@
+neural nret Keras => google
+
+new mindset
+
+tennis court keypoint detection
+
+
+
+-----------------------------------------------------------
+Su dunj tensorborad
+
+
+MAE , moo hinhf hooji tuj nhanh honw
+MSE , gia trij loss thaaps honw
+
+
+
+
+bai toan tinh toan cac gia trij lien tuc la bai toan hoi quy
+
+khoang cach giuwx 2 gias trij thuowngf ratas laf nhor, ddayas laf baif toans regeression
+Cacs gias trij thay dodoi lieen tucj thoongs nhatas vowsi nhau
+
+MSE thi se hoji tuj chaamj maf chawcs honw
+
+Cross entropy phug hopw cho baif toan binary classification
+giups mo hinhf danh gias eets quar ddaauf ra rata rox rangf
+
+neeu nhuw gias trij dujw doan ddungs thif loss thap
+cong neeus sai 1 tis thif loss tanwg leen rata cao
+
+
+soft max chuaanr hoa cacs liows veef chuaanr sacs xuaats 0-1 ddeer deex phaan loaji honw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

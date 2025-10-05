@@ -1,0 +1,81 @@
+Linear regression
+thế nào là linear rgression
+trong 1 bài toán nhiều biến thì chuyển thành multi linear regresison
+cái xu huớng của nó là chỉ có 2 loại thôi, đi lên, đi xuống, hoặc đi ngang
+có 1 sự phụ thuọco  giữa biến đầu vào và biến cần dự đoán, 
+dữ liệu thì đuợc biểu diễn bằng 1 hàm tuyến tính.
+
+
+y thưòng là 1 giá trị
+y đậm là một vector, 1 tập hợcp các giá trị.
+
+có 2 cách để cải thiện mô hình trong vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+traditional ML
+feature selection
+hyperparam
+
+baseline, sử dụng tất cả các feature, chọn tham số mặc định.
+
+tiếp tục cải tiến bằng cách chọn tham số tốt, sau khi mô hình đã có chút cải tiến
+tiếp tục sử dụng grid search hay cái j cx đc để tìm ra bộ tham số tốt
+
+
+voting cho classification
+average la cho regression.
+
+
+bagging Idea
+
+sampling lay mau trong du lieuj day goji la bootstrap
+trong bagging thi each tree was trained on a small subset of original dataset
+but randon forest take the entire dataset shuffle each time to train.
+
+
+when working with traditional ML , focus on the feature, feature selection
+But when working with Deep learning not focusing on feature that much
+
+
+boosting is first find a simple model
+and iteratively add model to take care of the wrong one, which the previous model has fail to inferences
+the next model will continuously improve the weakness of previous model. The weakness of model is the one that odel
+
+
+
+
+bai toan
+du lieuj lay  ow dau
+du lieu trong nhu nao
+su dung mo hinh nao
+cai tien mohinh ra sao
+
+
+I'm not interested in hangout that much, and absolutely I'll quit it anymore.
+
+
+
+ý tuởng đề tài, t
+tại sao lại áp dụng học máy vào đề tà này, mục tiêu cuối cùng là gì
+Giới thiệu Dataset.
+lấy ở đaua, chất lưọng ra sao
+Giới thiệu qua về các mô hình sẽ áp dụng
+So sánh hiệu năng giữa các mô hình khi có hoặc ko hyperparameter
+Kết luận làm đưọc gì và học đuọc gì từ đề tài này, 
+sản phẩm demo
+
+
+
+training error
+generalization error
+testing error
+
+dung cross validation
+ vif val set too small, not able to represent the distribution of data for testing and validating.
+ Need cross validation, let the model see all sample fairly
+ 
+ 1/k , why should we use that.
+ to reduce the randomness and lucky of the model by metrics
+ 
+ using Lasso for feature selection, 
+ 
+ 
+ The best math you can learn is how to calculate the future cost of current decision

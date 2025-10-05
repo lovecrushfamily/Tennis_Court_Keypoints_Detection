@@ -1,0 +1,183 @@
+Large Language Model
+
+Mọi thứ trong cuộc sống đều là sác xuất,
+
+Mô hình ngôn  ngữ mô phỏng cơ chế hoạt động của não bộ con nguời, mô phỏng cơ chế đầu vào
+
+Hình thành thông qua quá trình học, phát triển qua thời gian. Mô hình ngôn ngữ cũng mang màu sắc riêng, quyêt định phần lớn dựa vào cơ chế hoạt động trong não mỗi nguời và môi truờng ngôn ngữ
+
+Sống trong 1 môi truờng ngôn ngữ negative rất khó positive đuợc 
+
+Mô hình ngôn ngữ có thể biết đuợc đâu là từ đúng dâu là từ sai là do có 1 cái xác xuất các từ hay đi kèm với nhau, nó thực sự
+
+
+Trong ngôn ngữ có sự phù hợp giữa các từ, nó ms tạo lên ý nghĩa
+
+1 vấn đề sai 1 nguời nói sai thì nó là sai
+1 vấn đề sai mà 1000 nguời ns nó đúng thì nó đúng
+
+Mô hình ngôn ngữ là mô hình dự đoán từ tiếp theo bằng các chuỗi từ
+
+Tính xác suất của từ trong ngữ cảnh dựa trên N-gram
+
+Xác suất của từ tiếp theo sẽ = xác suất tất cả các từ đấy xuất hiện cùng nhau / xác xuất từng từ xuất hiện một
+(Cách này không ổn), nó lâu và khó
+
+Giả thuyết  Markov
+
+Xác suất của 1 từ bằng xác xuất của 1 số từ thôi chứ không phải tất cả các từ trong câu
+Cách tư duy cũ là 1 từ sẽ có liên quan đến tất cả những từ truớc đó, cái này thay đổi từ công thức đến mindset
+
+
+Mô hình n-gram
+
+1-gram : xác suất xuất hiện của 1 từ ko phụ thuộc vào từ trưóc đó
+(Bi-gram) 2-gram: xác suất của 1 từ suất hiện sau 1 từ cho truớc
+
+
+Thông thuờng thì cái mô hình ngôn ngữ sẽ cỡ 3,5-gram: nó chỉ cần quan tâm đến thế là đủ rồi
+
+Mục tiêu không phải tìm ra lời giải tốt nhất, mình cần tìm ra lời giải xấp xỉ đủ tốt là đuợc
+
+
+
+Những nguời thành công thì lại ko hay thich nói về kỹ thuật, cơ chế thành công đằng sau mà các ông đấy hay nói về thiên nhiên, cuộc sống
+
+Các mô hình ngôn ngữ lớn cũng như các language model thôi,
+giống ở chỗ là cũng sampling từ tiếp theo thôi
+còn khác ở chỗ là ở cấi quá trình trainning
+
+Đuợc train bằng cách đoán các từ tiếp theo
+
+Còn mô hình n-gram là đưa ra xác suất chính xác bằng cách đếm (lâu luôn, nhưng mà chắc chắn)
+
+Vì LLMs nó đoán các từ nên nó sinh ra 1 hiện tuợng gọi là hallucinations gì đó, ảo giác?
+
+Cần rất nhiều dữ liệu
+
+GPT-5 đuợc release mới đây có khả năng encode đuợc toàn bộ  tri thức của nhân loại từ trưóc tới giờ, nghe nó cứ kiểu ảo giác ấy
+MÔ hình cowx 100B tham số, khiếp quá
+
+
+
+Transformer là mô hình encodder - decoder
+
+GPT, Llama, claude là Sử dụng Decoder
+
+2 buớc vói các LLMs
+
+Pre-training model -> Finetuning
+
+
+Rất nhiều bài toán có thể đuợc biểu diễn thành bài toán dự đoán từ tiếp theo
+Gần như tất cả các bài toán trong NLP đểu có thể quy về bài toán dự đoán từ
+
+Như cách mà cơ chế bên trong não bộ vayaj, cơ chế sinh
+
+
+Cơ chế đơn giản của ChatGPT có thể hieuẻ là liên tục mã hoá và sinh ra từ mới, sinh ra đc từ mới xong cái nó encode cái từ đó luôn dể biến thành input cho dự đoán từ tiếp theo
+
+
+Many practical NLP  tasks can be cast as word prediction task!
+
+Cơ chế lấy mẫu cũng rất quan trọng
+
+Randddom sampling: cơ chế này ko tối ưu và đễ bị lặp từ, thầy bảo mô hình nó sẽ cứ đi sâu vào 1 nhánh ko thoát ra đuợc
+
+Temperature là cái quyết định mức độ nhậy cảm của mô hình với dữ liệu
+
+có 2 buớc trong việc training các LLMs : pretraining - finetuning
+
+Pre-training : Đc huấn luyện trên 1 bộ dữ liệu lớn và chung chung, General Large, giúp mô hình khái quát đc ngôn ngữ tổng quát, hình thành mô hình ngôn ngữ tổng quát
+Finetuning: Cho model training trên 1 tập dữ liệu cụ thể hơn, di vào 1 huớng cụ thể để giải quyết 1 bài toán nào đó cụ thể hơn.
+
+Quá trình training LLMs về mặt idea chỉ đơn giản là lấy input -> endoded -> predict -> ouput -> tính loss -> mang loss và output đi encoded tiếp để  -> predict từ tiếp theo
+
+Tất cả chỉ là mặt idea thôi còn làm thế nào để hiện thực cái idea này thì đấy là về engineering, hiểu iddea là 1 chuyện còn hiện thực đuợc nó lại là 1 chuyện
+
+
+4 buớc
+
+1 - tạo mô hình thô
+2 - gọi giũa
+3 - HUman Leanign reginforece feeedback
+4 - thây ko ns gì luôn.
+
+
+
+QUality and safety
+
+- ngôn ngữ nguời lớn
+
+- deduplication,
+
+- Nội dung độc hại
+
+Mô hình học đuợc gì  thông qua quá trình training
+
+Học đuợc mối tuơng quan giữa tất cả các từ trong 1 câu, trong tập training
+
+Ý tuởng ở đây
+ngôn ngữ bao gồm rất nhiều kiến thức
+
+
+1 số vấn đề  với việc đào dữ liệu trên wweb
+
+Bản quyền: ko kiện đc chatgpt vì ko chứng minh đuợc nó sử dụng dữ liệu của mình
+Vì dữ liệu sau khi sử lý dc mã hoá thành các vector mà, nguời mình không hiểu ddc
+
+
+Quá trình Finetuning: sau quá trình pre-training tạo ra 1 cái phôi, tiếp đến finetuning để tạo ra cái gì đó riêng hơn
+
+- ý nghĩa: thay thế 1 số tham số hoặc tất cả các tham số trên tập dữ liệu mới,
+
+
+Giải quyết vấn đề ảo giác này thì có RAG
+
+Retrieval Argumented Generation
+
+Những thứ cần quan tâm khi train LLMs
+
+Dữ liệu và Tiền sử lý dữ liệu rất quan trọng,
+Phải collect như nào, preprocessing ra sao.
+
+Việc trainng chỉ thuần machine learning thôi
+Quan sát loss, tuỳ chỉnh mô hình.
+
+RLHF: 
+
+
+Moore's Law, chất luợngcác mô hình  sẽ tăng lên theo thời gian theo tốc độ lên dốc cực nhanh
+
+Base -> (RLHF) -> instructGPT 
+
+
+OpenAI thuê rất nhiều nhân công giá rẻ Châu Phi để đánh nhãn cho dữ liệu chính là instructGPT cho con chat
+
+Oke sau khi nghe thầy nói thì mình cũng đã hiểu thêm về 1 số phần liên quan đến cái LLMs này rồi
+truớc tiên về phần reasoning, tại sao ChatGpt lại có khả năng reasoning như vậy!
+
+Thì là về cái RLHF kia , con Chat cần có sự cam thiệp của con nguời trong quá trình học, với 1 vấn dề nó cần có nguời tham gia thực sự trực tiếp trong quá trình huấn luận bằng cách đưa ra các instructGPT để giúp cho con GPT có thể hiểu đc lời giải bài toán đó
+ví dụ như với bài toán giải phuơng trình bậc 2 đi
+trong quá trinh RLHF thì con Chat sẽ đưa ra các option để giải quyết bài toán này, kiểu 3 4 option gì đó và sẽ có nguời nói cho nó biết là dâu là cách giải đúng, đâu là cách giải sai, kiểu dạng đưa ra instruct cho GPT hiểu cái pattern
+Thì cơ bản là vậy
+Khi muốn tiếp cận 1 vấn đề thì phải đưa nó xuống 1 cái task rất cụ thể thì mới có instruct cụ thể đuợc, dựa vào đó thì con Chat mới có thể reasoning đc, kể cả khi với dữ liệu mới.
+Thì đúng rồi đó, tất cả các vấn đề mà con CHat có thể giải quyết thì đều đã đuợc 1 ai đó instruct, huớng dẫn cho nó từ truớc rồi.
+
+Uả thế trên đời này bao nhiêu vấn đề thế thì cần bao nhiêu nguời cho đủ,vs Version GPT đầu tiên thì OPenAI đã chi 100M $ chỉ để instruct, đánh nhãn cho dữ liệu ấy, quá khủng khiếp luôn.
+
+Tức là openAI đã chi ra số tiền khá lớn để instruct cho con Chat giải quyết solve những cái vấn đề cơ bản chung chung này
+
+Ngta ví con GPT-01 như là 1 đứa trẻ 3 tuổi còn con GPT-05 này như là 1 đứa trẻ 5 tuổi, biết solve problem,
+ nhưng chưa thể think đc. Và nếu muốn nó biết cái gì đó thì phải có nguời dậy lại cho nó, instruct lại cho nó học
+Liên tục học, liên tục training, liên tục feedback
+Có thể nó không thể biết, solve đuợc tất cả mọi thứ nhưng những thú gì mà nhiều nguời, đại đa số nguời biết thì chắc chắn nó biết.
+
+
+
+
+Quá khủng khiêp luôn
+
+
+
+

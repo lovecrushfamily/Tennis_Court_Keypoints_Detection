@@ -1,0 +1,60 @@
+BIas cao thì là do sử dụng mô hình chưa đủ mạnh, quay lại tìm mô hình
+Variance cao thì quay ra hỏi tội của bộ dữ lieuẹ vì nó do bộ dữ liệu, tim bộ dữ lieuẹ tốt lên là đuợc
+
+
+ko phải lúc nào thêm training sample thì test cũng sẽ giảm, nó chỉ giảm đến 1 nguỡng nào đó thôi.
+đó là giới hạn của model
+
+muốn test eror giảm xuống thì thay đổi bản chất mô hình tức là thay luôn mô hình mới
+
+Thêm regulariztion để chấp nhận lỗi mục đính để giảm kỳ vọng của hàm mục tiêu đi. để cho nó ko bị overfitting
+
+
+Khả năng ánh xạ các kiến thứ chuyên ngành về DL của thầy ở 1 cái level thực sự đẳng cấp, bất kể cái kiến thức gì thầy cx có thể ánh xạ đó đến
+1 sự kiện, quuy luật, bài học trong cuộc sống, khá ấn tuợng. nó sẽ khiến mình vừa nhớ lâu vừa hiểu sâu đc vấn đề hơn.
+
+
+Scale dữ liệu để mô hình hội tụ nhanh hơn, cái ko gian tìm kiếm nó nhỏ thì thuật toán tối uư hội tụ nhanh hơn
+
+Ngay kể cả thầy cũng tự nhận thức đưọc bản thân là nguời cầu toàn, thích làm công ăn luơng và không muốn mạo hiểm.
+lấy vị dụ từ việc khởi tạo tham số của mô hình deep learning. cái đó mình ko đưọc chọn và phải 
+
+Điều quan trọng nhất để thành công là tầm nhìn, vision. góc nhìn khá skinny nhưng mà nó đúng với thầy.
+
+
+Ngay kể cả cái mindset mà cũng quên đưọc, má thật.
+
+Học cái gì cũng phải cố gắng link nó với những thứ mình quen thuộc trong cuộc sống, ko cần đâu xa. mà thực sự thì link với chính cuộc sống của bản thân là cách tối uư nhấtổ
+
+
+mình phải tìm ra cách để củng cố mindset của bản thân day by day, week by week thôi
+
+
+
+
+
+Các thuật toán tối uư, có cục bộ có toàn cục.
+
+Hiện tại điểm tối ưu của mình là gì => là kiến thức , khả năng học hỏi.
+10 năm về sau điểm tối ưu là thu nhập, 30 năm sau điểm tối ưu là kinh nghiệm
+40 năm sau thì điểm tối uư là sức khoẻ.
+
+mấy cái này là đang nói về gradient descent
+
+
+Ví dụ về điểm tối uư cục bộ.
+Khi mình nghèo thì mình chit muốn có 1 mục đính là làm giầu, còn khi mình giàu thì lại có nhiều mục đích,
+Quan tâm nhiều hơn đến cảm súc của bản rồi rồi các thứ, lúc đó thấy nguời bên cạnh mình ko mang lại hạnh phúc cho mình.
+rồi là mới thay đổi các thứ.
+Mình ko thích cái view này, mong là mình ko trở nên như thế
+
+
+sgd - momentum, vạna dụng lý thuyết quán tính 
+ada-grad 
+adam
+SOTA
+
+
+
+
+

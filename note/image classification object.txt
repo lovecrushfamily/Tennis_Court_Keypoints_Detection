@@ -1,0 +1,66 @@
+image classification
+object detection (object classification + object localization)
+image segmentation
+instant segmentation
+
+
+Học cách hiểu format của các bộ dữ liệu truớc -> đánh nhãn đuợc
+
+ImageNet
+COCO format
+Pascal VOC Format
+Yolo Format (Yolo có mấy cái kiểu format cơ, chứ ko phải 1 kiểu đâu)
+Ultralytics 
+
+ưu nhưọc điểm của mỗi cái kiểu format này là gì nhỉ. sinh ra nhiều bộ nó khác nhau như vậy chỉ vì đam mê à
+
+Roboflow (2D image labeling online tool)
+CVAT  (3D)
+
+
+Những cái pre-train model ddos là những cái bakcbone vì nó học đc  nhiều thứ rồi
+Việc của mình là finetuning- gắng thêm 1 số layer để nó hiểu thêm về bài toán của mình là đc. còn lại giữ nguyên.
+
+chỉ train những cái layer sau thôi.
+
+backbone ấy nó hiệu quả hon, nó biết đc khái quát vấn đề rồi.
+
+
+Object detection
+R-CNN - regional proposal
+Rõ ràng bên trong CNN lmj có wweight mà cứ pre-trained 
+thể chỉ, nó chỉ có mỗi cái kernel thôi mà, 
+hay là trong cái model pre-trainedd đó có sử dụng fully-connected layer
+
+
+Ban đầu học về R-CNN để hiểu đuợc muốn detect 1 object thì cần qua những cái step nào. theo con đuờng cơ bản nhất
+Nó là buớc cải tiến đột phá nhất khi apply đc deep learning vào, tại thời điểm đó có thể coi là state of the art
+Vì nó combine đc sliding window và CNN và cái Selective Search (kiểu nó đưa ra những cái vùng region có khả năng potentially chứa đối tuợng) Nó đề xuất nhiều lắm.CNN tại thời điểm này vẫn ùng để phân loại, còn việc trích xuatas đặc trưng thì lại phụ thuộc nhiều vào cái phưong pháp truyền thống kia
+từ  phân vùng đến trích xuất đặc trưng, Rules-base learning
+
+Mặc dù có những linitation về speed, em nó ko thể real-time detecting đc, delay quá lâu, Nhưng nó vẫn duợc coi là đột phá tại cái kỷ nguyên đấy
+Cái idea của Selective đấy chính là thứ holding model back. (chán luôn) Selective Search chỉ là dại diện thôi, còn nhiều cái khác nữa.
+
+Nhwung mà đỡ hơn Slidding window, idea nó chỉ đơn giản là truợt qua hình và đoán thôi. 
+
+truớc đo thì chỉ có sliding window thôi, much slow.
+
+
+Dưa ảnh vào -> cắt ảnh ra (cỡ 2k ảnh) -> đưa đống ảnh vào CNN phân loại (slow) -> chọn ra mảnh tốt nhất 
+Hiện tại thì em nó không còn dc dùng nữa nhưng tại thời diểm ra mắt em nó chính là cú plot twist ảo ma nhất.
+
+Faster R-CNN ra đời, xoá bỏ luôn mấy cái kĩ thuật trích xuất truyền thống như sliding window, Selective Search instead sử dụng
+Regional Proposal Network,
+
+Lại là 1 cứ twitst giảm đáng kể thời gian tạo ra các cái khu vực đề xuất
+Dựa vào việc khảo sát cái cái đối tuơng trong thực tế mà nguời ta đưa ra các cái cách sử dụng cái anchor box
+kiểu như từ 1 hình vuông nó scale lên hình chữ nhật ngang hay đứng và từ đó chọn ra cái vùng và nó nghi là đang chứa cái object dấy nhất
+
+
+Cơ bản thì cái nhà Faster R-CNN, 
+cái Faster này đã đạt đuợc cái state End-to-End model (removing SVM model)
+tức là nó ko có đùng đến mấy cái model phân lớp bên ngoài
+Tốc độ  nahnh hơn với RPN
+
+
+Not fast as Yolo Family, Difficult to train.

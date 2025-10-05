@@ -1,0 +1,48 @@
+ Dữ liệu dạng luới và có mối quan hệ phụ thuộc về mặt không gian
+
+Tại sao lại ko tính toán trên ko gian gốc mà lại tính toán trong không gian mới
+tức là phải qua 1 tầng tích chập
+
+không gian ban đầu nó ko đủ tốt để trích chọn đặc trưng
+và nó sẽ ánh xạ liên tục xang các ko gian mới dể trích chọn đặc trưng
+
+
+Ngay cả bên trong não nguời cũng có rất nhiều layẻ để nhận thức ảnh, sự vật ngoài đời, 1 bức ảnh của picaso mình nhìn sẽ ko hiểu
+Các mạng đang biểu diễn lại điều đấy , các hoạt động diễn ra trong não, cố gáng mô phỏng thôi chứ ko thể đâu
+
+Nhanh thật, giới thiệu nhanh quá.
+Kiến thức 
+
+Lý do mà nguời ta input dầu vào thành các cái ô nhỏ nhỏ này để train nhanh honw và tránh overfiting
+mang quá đơn giản thì high bias,
+
+Nếu mà không lm như này mà đưa cả ảnh vào thì kko khác gì fully connected
+Giữ đưọc mối liên quan giữa các đầu vào pixel trong ảnh.
+
+Còn tại sao lại là 3x3 , 5x5 => giảm số lưọng tham số xuống, thông qua thực nghiệm mà tìm ra thôi.
+
+Toán tử convolution là tính toán trên 1 vùng nhỏ mà ko phải trên toàn bộ ảnh
+
+sử dụng 13x13 thì nó region quá to
+
+Trên mỗi 1 bức ảnh có nhiều layer khác nhau
+và mỗi 1 layer sinh ra để capture thông tin của mỗi cái layer đó,
+
+Thầy lại ánh sạ đến real life, nhiều layẻ cho phép chúng ta nhìn duới nhiều góc nhìn khác nhau,
+
+
+các đặc trung quan trọng là các đặc trung có giá trị cao, theo góc nhìn từ mạng tích chập,
+
+sau mỗi 1 lớp convolution sẽ có 1 lớp pooling,
+
+pooling nó ko biến dổi dữ lieuẹ, nó chỉ bỏ đi các thành phần ko  quan trọng thôi, 1 hàm tuyến tính
+
+Mục tiêu là làm đơn giản thông tin đầu ra của lóp convolution phía truớc.
+
+Maxpooling, AveragePooling
+
+Giá trị trọng số cao tuơng úng vớu đặc trung quan trọng
+
+
+Kernel số lẻ, pooling số chẵn
+

@@ -1,0 +1,45 @@
+ Bài toán gốc của NLP là language model vì  nó sử lý đuợc tất cả các bài toán trong NLP,
+
+cụ thể là LLMs, hỏi cái j nó cx làm đuợc, Text generation, text classification, ..
+Tất cả all in one
+
+
+Địch máy thông thuờng là áp dụng thống kê
+Dịch máy hiện đại hơn thì dùng RNN, GRU
+
+
+Kiến trúc seq2seq gồm enoder - decoder
+
+encoder: mã hoá toàn bộ ngữ nghía của từ ra thành 1 vector cuối cùng trong bộ mã hoá, nên nó bị long-term depenencies
+
+Cái decoder chính là language model.
+nó đơn giản là giải mã những cái hiden state mà econder đã mã hoá lại, (ảo ma ghê)
+
+Kiến trúc seg2seq có 1 problematic, nút thắt cố chai, bôttom neck
+
+toàn bộ  ngữ nghĩa trong câu đuợc encoder thành 1 vector duy nhất ở cuối layer thì nó ko dủ dể biểu diễn cho toàn bộ câu đuợc, dễ mất nghĩa
+
+Kiến trúc attention để giải quyết bài toán này, bằng cách thiết lập 1 số cơ chế chú ý lên những từ quan trọng, bằng cách gán score cho các cái từ quan trọng
+kiểu như mình quan trọng ai đó hơn ai đó chẳng hạn, sử dụng score cho các neuron
+
+Nó có tác dụng cho bài toán text sumarization, 
+
+Kiến trúc attention ảo ma quá,
+
+Rồi khi mà nó dự đoán từ
+
+trong thực tế 80% là vẫn đề liên quan đến dữ liệu, đúng là 80 / 20 rules
+
+
+BERT: Deep Bidirectional for embeding
+
+: Không cần gán nhãn đữ liệu< về sau Transformer cũng thế ko cấn gán nhãn, cứ lấy dữ liệu về là đuợc
+
+Kích thuớc của mô hình phụ thuộc vào số lốp mà mô hình sử dụng.
+
+
+Mask language moddel:
+
+Nó sẽ che đi 1 số từ và chính mô hình sẽ hk cách dự doán các từ đó: 15% số từ 
+
+Semi-training Sử dụng dữ liệu dể train rồi predict ra dữ liệu mới rồi lại mang đi train

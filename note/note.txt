@@ -22,3 +22,12 @@ Tốc độ học của mình phải nhah hơn tốc độ phát triển của c
 
 
 cơ bản là vậy
+
+
+Học về dataset format -> coco pascal học hết
+Có những cái kiểu dataset gì.
+Luớt qua về object detection iddea với ý tuởng nguyên thuỷ nhất.: Sliding window
+
+Rồi tiếp đến R-CNN => Fast-RCNN -> Faster R-CNN -> Yolo
+
+Các bộ dataset làm tiêu chuẩn trong CV:
