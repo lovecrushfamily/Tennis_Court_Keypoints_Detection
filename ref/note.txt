@@ -1,0 +1,24 @@
+thì cơ bản project này sẽ kà project mình mang đi bảo vệ Deep learning, Computer Vision và cả Đồ án 3 nữa. 3 lần thuyết trình luôn.
+
+Kể ra nó cũng nhẹ đầu vì mình cx cần thờin loadd lại những cái kiến thức cơ bả trong cái môn deep này để còn bảo vệ đc
+
+
+Về Deep thì truớc tiên là mình cần phải làm lại hết những cái bài thực hành mà thầy giao cho mình
+Hoàn thiện Zero to hero , Keras andd Pytorch đó là thứ mình cần ngay tại thời điểm này.
+
+Về flow kiến thức thì cần phải thấu đuợc
+
+note về đeep learning: transformer ar, bert
+computer vision:  object detection revolution
+big đata: Pyspark
+
+
+
+Nay cần phải chuẩn bị mọi thứ cho các project để conf bảo vệ nữa, học thuộc cái project này là con đuờng tối uư nhất rồi.
+
+Cộng thêm đành ra 1 repo để học về coputer vision nữa. làm sao load lại nhanh 1 luợt cái revolution, improvement qua từng quãng thời gian
+
+Tốc độ học của mình phải nhah hơn tốc độ phát triển của công nghệ thì mới có thể bắt kịp đuợc.
+
+
+cơ bản là vậy
